@@ -1,5 +1,5 @@
 {
-  "name": "CS351 devContainer Template",
+  "name": "CS351 PA9 - Synthesis",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
@@ -18,7 +18,7 @@
       "jdkDistro": "open"
     }
   },
-  "runArgs": ["--name", "cs351-devcontainer-template"],
+  "runArgs": ["--name", "cs351-pa9-synthesis"],
   "customizations": {
     "vscode": {
       "extensions": [

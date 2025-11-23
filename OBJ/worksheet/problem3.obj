@@ -1,0 +1,20 @@
+define val = 10
+
+define Container =
+  class
+    static val = 20
+    field val
+
+    method init = proc() {set val = 30; self}
+
+    method getVals = proc()
+      let
+        lex = <!@>val     % Lexical environment
+        stat = <myclass>val
+      in
+        +(lex, stat)
+  end
+
+define c = .<new Container>init()
+define val = 999  % Change outer val
+.<c>getVals()

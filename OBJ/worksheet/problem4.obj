@@ -1,0 +1,21 @@
+define Top =
+  class
+    static id = 1
+    method getID = proc() 10
+  end
+
+define Bottom =
+  class extends Top
+    static id = 2
+    method getID = proc() 20
+
+    method test = proc()
+      let
+        a = <superclass>id
+        b = .<super>getID()
+      in
+        +(a, b)
+  end
+
+define b = new Bottom
+.<b>test()

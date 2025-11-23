@@ -1,0 +1,10 @@
+define f = proc(t) *(2,t)
+define c =
+    class
+    static x = 3
+    static f = proc(t) t
+    end
+let
+    x=5
+in
+    .<c>f(x)

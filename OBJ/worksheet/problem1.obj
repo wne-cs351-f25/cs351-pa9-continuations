@@ -1,0 +1,19 @@
+define A =
+  class
+    static x = 100
+    field x
+
+    method init = proc() {set x = 10; self}
+
+    method calc = proc(x)
+      % Which x is which?
+      let
+        param = x
+        fld = <self>x
+        stat = <myclass>x
+      in
+        +(+(param, fld), stat)
+  end
+
+define a = .<new A>init()
+.<a>calc(1)

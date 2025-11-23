@@ -1,0 +1,14 @@
+define MyClass =
+  class
+    static x = 5
+    static staticProc = proc()
+      % Which of these are valid in static context?
+      % A: <self>x - INVALID (no instance)
+      % B: <myclass>x - VALID
+      % C: <!@>x - VALID
+
+      <myclass>x
+    field x
+  end
+
+.<MyClass>staticProc()

@@ -1,0 +1,16 @@
+define Parent =
+  class
+    method identify = proc() 1
+
+    method callSelf = proc() .<self>identify()
+  end
+
+define Child =
+  class extends Parent
+    method identify = proc() 2
+  end
+
+define c = new Child
+
+% Output will be 2 (self enables dynamic dispatch)
+.<c>callSelf()

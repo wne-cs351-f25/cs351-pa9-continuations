@@ -1,0 +1,19 @@
+define A =
+  class
+    method foo = proc() 1
+    method test = proc() .<self>foo()
+  end
+
+define B =
+  class extends A
+    method foo = proc() 2
+    method test = proc() .<super>test()
+  end
+
+define C =
+  class extends B
+    method foo = proc() 3
+  end
+
+define c = new C
+.<c>test()

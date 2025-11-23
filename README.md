@@ -184,48 +184,21 @@ Implement and benchmark a "Threads vs Processes" demo.
 
 ---
 
-## Grading Rubric
+## Submission
 
-| Component                        | Points  | Criteria                                                      |
-| -------------------------------- | ------- | ------------------------------------------------------------- |
-| Part 1: Pass-by-object-reference | 25      | Correct understanding, thorough analysis, working code        |
-| Part 2: Duck typing              | 25      | Clear comparison, working protocols, proper type hints        |
-| Part 3: OBJ to Python            | 30      | Accurate translations, insightful comparison of OOP features  |
-| Part 4: Language Design          | 20      | Deep engagement with GIL evolution and design trade-offs      |
-| **Total**                        | **100** |                                                               |
-| Bonus                            | +10     | Working benchmark and clear explanation of concurrency models |
+**To Submit:**
 
-### Deductions
+1. Test your programs to ensure they work correctly
+2. From inside your container: `tar -czf /workspace/pa9-YOURNAME.zip /workspace`
+3. Download and submit the zip file to Kodiak
 
-- Missing or incomplete analysis: -5 points per part
-- Code doesn't run: -10 points per part
-- Late submission: -10% per day (max 5 days)
+**Grading Criteria:**
 
----
+- **Submission (33.3%):** Files are properly named and located as specified
+- **Completeness (33.3%):** All questions attempted (incomplete = incorrect)
+- **Correctness (33.3%):** Solutions demonstrate understanding of type systems
 
-## Submission Instructions
-
-1. Complete all parts in your PA9 repository.
-2. Organize files as:
-   ```
-   PA9/
-   ├── part1_analysis.md
-   ├── part1_code.py
-   ├── part2_analysis.md
-   ├── part2_code.py
-   ├── part3_translation.py
-   ├── part3_analysis.md
-   ├── part4_analysis.md
-   ├── bonus_concurrency.py
-   ├── bonus_report.md
-   └── README.md (overview and instructions)
-   ```
-3. Include a `README.md` with:
-   - Your name and date
-   - How to run each part
-   - Python version used
-   - Any special dependencies
-4. Push to your GitHub repository by December 7, 11:59 PM.
+**Late Policy:** 10% per day, maximum 5 days late
 
 ---
 

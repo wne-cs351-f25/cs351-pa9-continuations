@@ -5,15 +5,16 @@
 
 ## Quick Reference
 
-| Symbol       | Usage           | Purpose                                                                                                                     | Context                   |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| `self`       | `<self>x`       | Access members of the **original receiver** (the whole object). Enables dynamic dispatch (polymorphism).                    | Instance Methods          |
-| `super`      | `<super>x`      | Access members of the **parent class instance**. Used to call overridden methods from parent class.                         | Instance Methods          |
-| `myclass`    | `<myclass>x`    | Access **static members** (fields and procs) of the current class.                                                          | Static & Instance Contexts|
-| `superclass` | `<superclass>x` | Access **static members** of the parent class.                                                                              | Static & Instance Contexts|
-| `!@`         | `<!@>x`         | Access variables from the **lexical environment** where the class was defined (closure-like behavior).                      | All Contexts              |
+| Symbol       | Usage           | Purpose                                                                                                   | Context                    |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------- | -------------------------- |
+| `self`       | `<self>x`       | Access members of the **original receiver** (the whole object). Enables dynamic dispatch (polymorphism).  | Instance Methods           |
+| `this`       | `<this>x`       | Access members of the **current class instance**. Bypasses dynamic dispatch (ignores subclass overrides). | Instance Methods           |
+| `super`      | `<super>x`      | Access members of the **parent class instance**. Used to call overridden methods from parent class.       | Instance Methods           |
+| `myclass`    | `<myclass>x`    | Access **static members** (fields and procs) of the current class.                                        | Static & Instance Contexts |
+| `superclass` | `<superclass>x` | Access **static members** of the parent class.                                                            | Static & Instance Contexts |
+| `!@`         | `<!@>x`         | Access variables from the **lexical environment** where the class was defined (closure-like behavior).    | All Contexts               |
 
-**Note:** OBJ does not have a separate `this` keyword. Use `<self>` to access the current object's fields and methods.
+**Note:** `<self>` behaves like `this` in Java (dynamic). `<this>` in OBJ restricts access to the current class's implementation (similar to `super` but for the current class).
 
 ---
 
@@ -45,7 +46,7 @@ define a = .<new A>init()
 .<a>calc(1)
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -82,7 +83,7 @@ define c = new Child
 }
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -95,6 +96,7 @@ define c = new Child
 - Result: **2**
 
 **Key Concept:** `self` enables polymorphism through dynamic dispatch
+
 </details>
 
 ---
@@ -124,7 +126,7 @@ define val = 999  % Change outer val (doesn't affect <!@>)
 .<c>getVals()
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -138,6 +140,7 @@ define val = 999  % Change outer val (doesn't affect <!@>)
 **Note:** In OBJ, `<!@>` provides access to the current lexical environment, capturing the most recent binding of `val` (which is 999 after the second define).
 
 **Key Concept:** `<!@>` accesses the lexical environment, `<myclass>` accesses static fields
+
 </details>
 
 ---
@@ -168,7 +171,7 @@ define b = new Bottom
 .<b>test()
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -180,6 +183,7 @@ define b = new Bottom
 - Result: 1 + 10 = 11
 
 **Key Concept:** `superclass` for static members, `super` for instance members of parent
+
 </details>
 
 ---
@@ -203,7 +207,7 @@ define MyClass =
 .<MyClass>staticProc()
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -215,6 +219,7 @@ define MyClass =
 - `<myclass>x` accesses the static field. Value: **5**
 
 **Key Concept:** Static members can only access other static members or lexical scope
+
 </details>
 
 ---
@@ -243,7 +248,7 @@ define c = new C
 .<c>test()
 ```
 
-**Predicted Output:** ___________
+**Predicted Output:** ****\_\_\_****
 
 <details>
 <summary>Reveal Solution</summary>
@@ -259,6 +264,7 @@ define c = new C
 - `C` implements `foo`, returning **3**
 
 **Key Concept:** `self` preserves the original receiver through super calls
+
 </details>
 
 ---
@@ -268,9 +274,10 @@ define c = new C
 Understanding OBJ's keyword system is crucial for the final exam:
 
 1. **`self`** - Always refers to the original receiver (enables polymorphism)
-2. **`super`** - Calls parent class methods (static dispatch to parent)
-3. **`myclass`** - Access current class's static members
-4. **`superclass`** - Access parent class's static members
-5. **`<!@>`** - Access lexical environment where class was defined
+2. **`this`** - Refers to the current class instance (bypasses dynamic dispatch)
+3. **`super`** - Calls parent class methods (static dispatch to parent)
+4. **`myclass`** - Access current class's static members
+5. **`superclass`** - Access parent class's static members
+6. **`<!@>`** - Access lexical environment where class was defined
 
 Remember: OBJ uses `<self>` where Java/Python would use `this`/`self` for field access!

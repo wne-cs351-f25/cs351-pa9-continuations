@@ -46,7 +46,7 @@ define a = .<new A>init()
 .<a>calc(1)
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>
@@ -83,7 +83,7 @@ define c = new Child
 }
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>
@@ -122,11 +122,11 @@ define Container =
   end
 
 define c = .<new Container>init()
-define val = 999  % Change outer val (doesn't affect <!@>)
+define val = 999
 .<c>getVals()
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>
@@ -171,7 +171,7 @@ define b = new Bottom
 .<b>test()
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>
@@ -207,7 +207,7 @@ define MyClass =
 .<MyClass>staticProc()
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>
@@ -248,7 +248,7 @@ define c = new C
 .<c>test()
 ```
 
-**Predicted Output:** ****\_\_\_****
+**Predicted Output:** \***\*\_\_\_\*\***
 
 <details>
 <summary>Reveal Solution</summary>

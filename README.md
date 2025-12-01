@@ -139,7 +139,7 @@ This assignment has four core parts and one bonus opportunity:
 
 ---
 
-### Part 4: Language Design Synthesis (20 points)
+### (Optional) Part 4: Language Design Synthesis (20 points)
 
 **Background:** Python's Global Interpreter Lock (GIL) has been a defining feature and limitation. Python 3.13 introduces optional free-threading mode (PEP 703).
 
@@ -166,7 +166,7 @@ This assignment has four core parts and one bonus opportunity:
 
 ---
 
-### Bonus: Threads vs Processes (10 extra credit)
+### (Optional) Bonus: Threads vs Processes (10 extra credit)
 
 **Background:** Concurrency models are crucial for modern programming.
 

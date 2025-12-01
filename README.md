@@ -5,7 +5,7 @@
 
 ## Overview
 
-Throughout this course, you've built interpreters for increasingly sophisticated programming languages using PLCC. You've implemented:
+Throughout this course, we've built interpreters for increasingly sophisticated programming languages using PLCC. Implementing:
 
 - Lexical analysis and parsing (PA1-PA2)
 - Expression evaluation and environments (PA3-PA4)
@@ -39,7 +39,7 @@ This assignment has four core parts and one bonus opportunity:
 
 ### Part 1: Pass-by-Object-Reference (25 points)
 
-**Background:** In PA6, you implemented call-by-value, call-by-reference, call-by-name, and call-by-need. Python uses a different model: pass-by-object-reference.
+**Background:** In PA6, we used call-by-value, call-by-reference, call-by-name, and call-by-need. Python uses a different model: pass-by-object-reference.
 
 **Tasks:**
 
@@ -74,7 +74,7 @@ This assignment has four core parts and one bonus opportunity:
 
 ### Part 2: Duck Typing vs Static Typing (25 points)
 
-**Background:** In PA7, you built a type checker for TYPE0/TYPE1 languages with static type checking. Python uses duck typing: "If it walks like a duck and quacks like a duck, it must be a duck."
+**Background:** In PA7, you used a type checker for TYPE0/TYPE1 languages with static type checking. Python uses duck typing: "If it walks like a duck and quacks like a duck, it must be a duck."
 
 **Tasks:**
 
@@ -111,7 +111,7 @@ This assignment has four core parts and one bonus opportunity:
 
 ### Part 3: OBJ to Python Translation (30 points)
 
-**Background:** In PA8, you implemented the OBJ language. Now you will see how those concepts translate to Python.
+**Background:** In PA8, you used the OBJ language. Now you will see how those concepts translate to Python.
 
 **Tasks:**
 
